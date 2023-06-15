@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "412801616296",
+    "project_id": "routinizerapp",
+    "storage_bucket": "routinizerapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412801616296:android:ed4179e2e285f21f31359d",
+        "android_client_info": {
+          "package_name": "com.example.routinizerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412801616296-qqnlrlvncoeih3fhpg95m36eogd7ifaf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbdaYHwTLnky730stShmxErgPemFhPF90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412801616296-qqnlrlvncoeih3fhpg95m36eogd7ifaf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
