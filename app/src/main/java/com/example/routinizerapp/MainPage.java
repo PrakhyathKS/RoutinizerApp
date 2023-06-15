@@ -3,6 +3,7 @@ package com.example.routinizerapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -98,7 +99,9 @@ public class MainPage extends AppCompatActivity {
                 boolean flamingo = false;
                 boolean apple = false;
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    if (dataSnapshot1.child("test").getValue().toString() != null) {
+                   // DataSnapshot testChildSnapshot = dataSnapshot1.child("test");
+                    if (dataSnapshot1.exists() && dataSnapshot1.getValue() != null) {
+                        String testValue = dataSnapshot1.getValue().toString();
                        // if (dataSnapshot1.child("test").getValue().toString().toLowerCase().contains("") ){
 //                            String code = dataSnapshot1.child("Customer Code").getValue().toString();
 //                            String Cname = dataSnapshot1.child("Customer Name").getValue().toString();
@@ -110,7 +113,7 @@ public class MainPage extends AppCompatActivity {
 //                            String loc = dataSnapshot1.child("LOCATION").getValue().toString();
 //                            loc = loc.replace('-', '.');
 //                            loc = "geo:" + loc + "?q=" + loc;
-                            Log.e("SUCCESSFULL", dataSnapshot1.child("test").getValue().toString());
+                            Log.d("SUCCESSFULL", dataSnapshot1.getValue().toString());
                         //}
                     }
 
@@ -156,6 +159,18 @@ public class MainPage extends AppCompatActivity {
             public void onClick(View v) {
                 View box = LayoutInflater.from(MainPage.this).inflate(R.layout.reminder, linearLayout, false);
                 linearLayout.addView(box);
+
+
+                box.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(MainPage.this,reminder_edit.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+
+
             }
         });
 
@@ -172,6 +187,8 @@ public class MainPage extends AppCompatActivity {
             public void onClick(View v) {
                 View box = LayoutInflater.from(MainPage.this).inflate(R.layout.counter, linearLayout, false);
                 linearLayout.addView(box);
+
+
             }
         });
 

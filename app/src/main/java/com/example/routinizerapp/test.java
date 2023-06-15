@@ -23,12 +23,12 @@ public class test extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
-
-        linearLayout = new LinearLayout(this );
-        linearLayout = findViewById(R.id.listpage);
-
-    google = findViewById(R.id.google);
+//        setContentView(R.layout.activity_test);
+//
+//        linearLayout = new LinearLayout(this );
+//        linearLayout = findViewById(R.id.listpage);
+//
+//    google = findViewById(R.id.google);
 
 
 
