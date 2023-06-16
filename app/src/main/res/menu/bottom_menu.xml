@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/forYou"
+        android:icon="@drawable/for_you"
+        android:title="For you" />
+    <item
+        android:id="@+id/task"
+        android:icon="@drawable/for_you"
+        android:title="Task" />
+    <item
+        android:id="@+id/timerMenu"
+        android:icon="@drawable/for_you"
+        android:title="Timer" />
+    <item
+        android:id="@+id/logoutMenu"
+        android:icon="@drawable/for_you"
+        android:title="Logout" />
+</menu>
