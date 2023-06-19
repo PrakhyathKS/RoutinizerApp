@@ -22,7 +22,7 @@ public class MainPageWithNavBar extends AppCompatActivity {
         bnv = findViewById(R.id.bottomNavBar);
         fragmentManager = getSupportFragmentManager();
 
-        showFragment(new First2Fragment());
+        showFragment(new ForyouFragment());
 
         bnv.setOnItemSelectedListener(item -> {
             if(item.getItemId()==R.id.forYou) {

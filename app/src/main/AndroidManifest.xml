@@ -15,6 +15,9 @@
         android:theme="@style/Theme.RoutinizerApp"
         tools:targetApi="31">
         <activity
+            android:name=".WizardActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainPageWithNavBar"
             android:exported="false" />
         <activity
