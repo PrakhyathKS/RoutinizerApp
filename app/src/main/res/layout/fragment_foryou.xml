@@ -25,7 +25,8 @@
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="preroutineclick">
 
             <!-- Customize the layout for the first card here -->
             <!-- You can use any layout components (TextView, ImageView, etc.) to display the content -->
@@ -39,7 +40,8 @@
 
                 <ImageView
                     android:layout_width="64dp"
-                    android:layout_height="64dp" />
+                    android:layout_height="64dp"
+                    android:tag="fiveminmorning" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -61,7 +63,9 @@
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="preroutineclick"
+            android:tag="tenminworkout">
 
             <!-- Customize the layout for the second card here -->
             <LinearLayout
@@ -101,7 +105,9 @@
 
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="preroutineclick"
+            android:tag="mourningroutine">
 
             <!-- Customize the layout for the third card here -->
             <LinearLayout
@@ -134,7 +140,8 @@
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="preroutineclick">
 
             <!-- Customize the layout for the fourth card here -->
             <LinearLayout
