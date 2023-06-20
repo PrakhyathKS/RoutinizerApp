@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Morning Routine"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/bedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Make Your Bed (1 minute)" />
+
+    <TextView
+        android:id="@+id/hydrateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. Hydrate (30 seconds)" />
+
+    <TextView
+        android:id="@+id/brushTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. Brush Your Teeth (2 minutes)" />
+
+    <TextView
+        android:id="@+id/stretchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4. Stretch or Do a Quick Exercise (1 minute)" />
+
+    <TextView
+        android:id="@+id/intentionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5. Set Intentions for the Day (30 seconds)" />
+
+</LinearLayout>
