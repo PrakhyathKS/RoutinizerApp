@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -19,16 +20,30 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+
 
 public class MainPage extends AppCompatActivity {
     Button expandButton;
     CalendarView calendarView;
+
 
     FloatingActionButton fbMain,fb1,fb2,fb3;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://routinizerapp-default-rtdb.firebaseio.com/");
     DatabaseReference myRef = database.getReference("Info");
 
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    String userId = user.getUid();
+
+    FirebaseDatabase database1 = FirebaseDatabase.getInstance();
+
+
+    DatabaseReference userNodeRef = database1.getReference().child("users").child(userId);
 
     boolean isbool=true;
     private boolean areButtonsVisible;
@@ -88,6 +103,52 @@ public class MainPage extends AppCompatActivity {
         fb1 = findViewById(R.id.fb1);
         fb2 = findViewById(R.id.fb2);
         fb3 = findViewById(R.id.fb3);
+
+        ////////////////////////////////////////////////
+
+        ValueEventListener valueEventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+
+                    System.out.println("User node exists.");
+                } else {
+
+                    System.out.println("User node does not exist. Adding a new node.");
+
+
+                    userNodeRef.child(userId);
+                    userNodeRef.child(userId).child("counter");
+                    userNodeRef.child(userId).child("reminder");
+                    userNodeRef.child(userId).child("todo");
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+                System.out.println("Error: " + databaseError.getMessage());
+            }
+        };
+
+
+        userNodeRef.addListenerForSingleValueEvent(valueEventListener);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /////////////////////////////////////////////////////////////////////
+
 
         Log.e("wwww","ssss");
 
@@ -157,14 +218,51 @@ public class MainPage extends AppCompatActivity {
         fb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                final String[] countcpy = {"0"};
+
+                DatabaseReference reminderNodeRef = database1.getReference().child("users").child(userId).child("reminder");
+
+                reminderNodeRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        long remcount = dataSnapshot.getChildrenCount();
+                        System.out.println("Number of nodes under 'reminder': " + remcount);
+
+                       String count = String.valueOf(remcount+1);
+                        userNodeRef.child(userId).child("reminder").child((count));
+                        countcpy[0] =count;
+
+
+                    }
+
+
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        // Handle any errors that occur during the operation
+                        System.out.println("Error: " + databaseError.getMessage());
+                    }
+                });
+
+
+
+
                 View box = LayoutInflater.from(MainPage.this).inflate(R.layout.reminder, linearLayout, false);
+                EditText remnum = box.findViewById(R.id.Remicount);
+                remnum.setText(countcpy[0]);
                 linearLayout.addView(box);
 
 
                 box.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
+                            Log.d("countcpy",countcpy[0]);
+
                         Intent intent = new Intent(MainPage.this,reminder_edit.class);
+                        intent.putExtra("countnum",remnum.getText().toString() );
                         startActivity(intent);
                         finish();
                     }
