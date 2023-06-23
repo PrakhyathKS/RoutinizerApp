@@ -39,16 +39,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView ReminderName,Remicount;
+      // TextView ReminderName,Remicount;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            ReminderName=ReminderName.findViewById(R.id.ReminderName);
-            Remicount=Remicount.findViewById(R.id.Remicount);
+            //ReminderName=ReminderName.findViewById(R.id.ReminderName);
+          //  Remicount=Remicount.findViewById(R.id.Remicount);
         }
 
         public void setDate(String rname, String rcount) {
-            ReminderName.setText(rname);
-            Remicount.setText(rcount);
+            //ReminderName.setText(rname);
+          //  Remicount.setText(rcount);
         }
     }
 }
