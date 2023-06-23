@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E1E7FE"
     android:onClick="login"
     tools:context=".LoginPage">
 
@@ -58,7 +59,7 @@
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:background="#8767F0"
+        android:backgroundTint="#8767F0"
         android:onClick="login"
         android:text="LOGIN"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,13 +101,15 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="187dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="136dp"
+        android:layout_width="207dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="112dp"
         android:text="Login"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />

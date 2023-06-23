@@ -27,7 +27,7 @@ public class mainpage2 extends AppCompatActivity {
 
     private void initData() {
         remiderlist =new ArrayList<>();
-        remiderlist.add(new ModelClass("hello","1" ));
+        //remiderlist.add(new ModelClass("hello","1" ));
     }
 
     private void initRecycleView() {

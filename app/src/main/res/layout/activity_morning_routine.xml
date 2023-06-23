@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1E7FE"
+    android:backgroundTint="#E1E7FE"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#E1E7FE">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E1E7FE"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Morning Routine Guide"
+                android:textColor="#8767EF"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="1. Wake up at the same time each day: Set a specific wake-up time that allows for consistency in your routine and gives you enough time to complete all the activities."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="2. Hydrate and stretch: Start your morning by drinking a glass of water to rehydrate your body. Then, engage in a quick stretching routine to loosen up your muscles and increase blood flow."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="3. Mindfulness or meditation: Spend 5-10 minutes practicing mindfulness, meditation, or deep breathing exercises to center your mind and promote mental clarity."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="4. Exercise: Dedicate 30 minutes to an hour for physical exercise. This could include cardio exercises like running, cycling, or swimming, as well as strength training or yoga."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="5.Shower and grooming: Take a refreshing shower and complete your grooming routine, such as brushing your teeth, washing your face, and styling your hair."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="6.Eat a nutritious breakfast: Prepare and enjoy a balanced breakfast consisting of protein, whole grains, fruits or vegetables, and healthy fats. Avoid processed foods and opt for options like eggs, whole-grain toast, fruits, yogurt, or smoothies."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="7.Plan your day: Spend 10-15 minutes reviewing your schedule, prioritizing tasks, and setting goals for the day. Make a to-do list or use a planner to stay organized."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="8.Skill development: Allocate 15-30 minutes to engage in an activity that helps you develop a skill or expand your knowledge. This could be reading a book, listening to educational podcasts, or taking an online course."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="9.Connect with loved ones: Use a few minutes to connect with family members or friends. Send a text message, make a quick phone call, or have breakfast together if possible."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E1E7FE"
+                android:padding="16dp"
+                android:text="10.Self-reflection or journaling: Take 5-10 minutes to reflect on your thoughts, feelings, and aspirations. Consider writing in a journal to express gratitude, set intentions, or jot down any ideas or inspirations."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="11.Review personal goals: Spend a couple of minutes reviewing your long-term goals or aspirations to keep them fresh in your mind and maintain focus on your personal growth."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:paddingBottom="16dp"
+                android:text="12.Prepare for the day ahead: Gather the necessary items for work or other commitments, pack your bag, and ensure you have everything you need before leaving the house."
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

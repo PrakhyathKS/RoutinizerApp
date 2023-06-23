@@ -1,46 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_margin="10dp"
+    android:background="#E1E7FE"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewHeading"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Morning Routine"
-        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:text="5-Minute Morning Routine"
+        android:textColor="#8767EF"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/bedTextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/step1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1. Make Your Bed (1 minute)" />
+        android:layout_marginTop="16dp"
+        android:text="1. Make Your Bed (1 minute)"
+        android:textColor="#8767EF"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/hydrateTextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/step1Description"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2. Hydrate (30 seconds)" />
+        android:text="Take a moment to make your bed, straightening the sheets, fluffing the pillows, and arranging the blankets. This simple task brings order to your space and gives you a sense of accomplishment right from the start."
+        android:textColor="#FFFFFF" />
 
     <TextView
-        android:id="@+id/brushTextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/step2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="3. Brush Your Teeth (2 minutes)" />
+        android:layout_marginTop="16dp"
+        android:text="2. Hydrate (30 seconds)"
+        android:textColor="#8767EF"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/stretchTextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/step2Description"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="4. Stretch or Do a Quick Exercise (1 minute)" />
+        android:text="Drink a glass of water to rehydrate your body. Hydration is crucial after a night's sleep, and it helps kickstart your metabolism and prepare your body for the day ahead."
+        android:textColor="#FFFFFF" />
 
     <TextView
-        android:id="@+id/intentionsTextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/step3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="5. Set Intentions for the Day (30 seconds)" />
+        android:layout_marginTop="16dp"
+        android:text="3. Brush Your Teeth (2 minutes)"
+        android:textColor="#8767EF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/step3Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spend two minutes brushing your teeth thoroughly. Use gentle, circular motions and don't forget to brush your tongue. Brushing your teeth in the morning promotes oral hygiene and leaves you with a fresh feeling for the day."
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/step4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="4. Stretch or Do a Quick Exercise (1 minute)"
+        android:textColor="#8767EF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/step4Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take a minute to stretch your body or engage in a quick exercise. You can perform gentle stretches, such as reaching towards the ceiling or touching your toes. Alternatively, you can do a few rounds of squats or lunges to get your blood flowing."
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/step5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="5. Set Intentions for the Day (30 seconds)"
+        android:textColor="#8767EF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/step5Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take a moment to set your intentions and priorities for the day. Think about what you want to accomplish or the attitude you want to embody. By setting clear intentions, you can focus your energy on what matters most to you."
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

@@ -1,27 +1,51 @@
 package com.example.routinizerapp;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainPageFragment extends Fragment {
+    Button expandButton;
+    CalendarView calendarView;
 
-    private Button expandButton;
-    private CalendarView calendarView;
-    private FloatingActionButton fbMain, fb1, fb2, fb3;
-    private LinearLayout linearLayout;
+    FloatingActionButton fbMain, fb1, fb2, fb3;
+
+
+
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    String userId = user.getUid();
+
+    FirebaseDatabase database1 = FirebaseDatabase.getInstance();
+    DatabaseReference userNodeRef = database1.getReference().child("users").child(userId);
+
+    boolean isbool = true;
     private boolean areButtonsVisible;
+
+    LinearLayout linearLayout;
 
     private float convertDpToPixels(float dp) {
         return dp * getResources().getDisplayMetrics().density;
@@ -61,9 +85,8 @@ public class MainPageFragment extends Fragment {
         areButtonsVisible = true;
     }
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_main_page, container, false);
         expandButton = view.findViewById(R.id.expandButton);
         calendarView = view.findViewById(R.id.calendarView);
@@ -74,41 +97,62 @@ public class MainPageFragment extends Fragment {
         fb2 = view.findViewById(R.id.fb2);
         fb3 = view.findViewById(R.id.fb3);
 
+
         hideButtons();
 
-        fbMain.setOnClickListener(v -> {
-            if (areButtonsVisible) {
-                hideButtons();
-            } else {
-                showButtons();
+        fbMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (areButtonsVisible) {
+                    hideButtons();
+                } else {
+                    showButtons();
+                }
             }
         });
 
-        fb1.setOnClickListener(v -> {
-            View box = LayoutInflater.from(requireContext()).inflate(R.layout.reminder, linearLayout, false);
-            linearLayout.addView(box);
+        fb1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(requireContext(), "reminder", Toast.LENGTH_SHORT).show();
+                Intent intent= new Intent(requireContext(), reminder_edit.class);
+                intent.putExtra("click","reminder");
+                startActivity(intent);
+            }
         });
 
-        fb2.setOnClickListener(v -> {
-            View box = LayoutInflater.from(requireContext()).inflate(R.layout.todo, linearLayout, false);
-            linearLayout.addView(box);
+        fb2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(requireContext(), "todo", Toast.LENGTH_SHORT).show();
+                Intent intent= new Intent(requireContext(), reminder_edit.class);
+                intent.putExtra("click","todo");
+                startActivity(intent);
+            }
         });
 
-        fb3.setOnClickListener(v -> {
-            View box = LayoutInflater.from(requireContext()).inflate(R.layout.counter, linearLayout, false);
-            linearLayout.addView(box);
+        fb3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(requireContext(), "counter", Toast.LENGTH_SHORT).show();
+              Intent intent= new Intent(requireContext(), reminder_edit.class);
+              intent.putExtra("click","counter");
+                startActivity(intent);
+            }
         });
 
-        expandButton.setOnClickListener(v -> {
-            // Toggle the visibility of the CalendarView
-            if (calendarView.getVisibility() == View.INVISIBLE) {
-                calendarView.setVisibility(View.VISIBLE);  // Show the CalendarView
-            } else {
-                calendarView.setVisibility(View.INVISIBLE);  // Hide the CalendarView
+        expandButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Toggle the visibility of the CalendarView
+                if (calendarView.getVisibility() == View.INVISIBLE) {
+                    calendarView.setVisibility(View.VISIBLE); // Show the CalendarView
+                } else {
+                    calendarView.setVisibility(View.INVISIBLE); // Hide the CalendarView
+                }
             }
         });
 
         return view;
     }
 }
-

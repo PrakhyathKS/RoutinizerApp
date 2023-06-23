@@ -32,11 +32,11 @@ public class MainPageWithNavBar extends AppCompatActivity {
                 showFragment(new MainPageFragment());
                 return true;
             } else if (item.getItemId()==R.id.timerMenu) {
-                showFragment(new First4Fragment());
+                showFragment(new TimerFragment());
                 return true;
             } else if (item.getItemId()==R.id.logoutMenu) {
-                showFragment(new Second4Fragment());
-                return true;
+//                showFragment(new Second4Fragment());
+               return true;
             }
             return false;
         });

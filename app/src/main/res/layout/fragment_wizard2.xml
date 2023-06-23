@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/backgroundImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop" />
+    android:layout_height="match_parent"
+    android:background="#E1E7FE"
+    android:paddingHorizontal="10dp">
 
     <Button
         android:id="@+id/btnSkip2"
@@ -32,11 +27,23 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
-        android:backgroundTint="#E0AAFF"
+        android:backgroundTint="#8767EF"
         android:text="Next"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="389dp"
+        android:layout_height="404dp"
+        android:layout_marginTop="92dp"
+        android:paddingHorizontal="30dp"
+        android:text="One of the key features of the Routinizer app is its flexibility in adapting to your specific needs. It provides a wide range of customization options to ensure that your routines align perfectly with your goals and preferences. You can set specific time intervals for each task, assign priorities, and even add reminders to keep you on track. Additionally, the app allows you to include detailed instructions or notes for each routine, ensuring that you have all the information you need at your fingertips. With the Routinizer app, you have the power to tailor your routines to suit your unique lifestyle."
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

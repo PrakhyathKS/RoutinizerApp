@@ -1,5 +1,6 @@
 package com.example.routinizerapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,9 @@ public class ForyouFragment extends Fragment {
     private CardView cardView3;
     private CardView cardView4;
 
+
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -29,16 +33,20 @@ public class ForyouFragment extends Fragment {
         cardView4 = view.findViewById(R.id.cardView4);
 
         cardView1.setOnClickListener(v -> {
-
+            Intent intent=new Intent(requireContext(),fiveMinsRoutine.class);
+            startActivity(intent);
         });
         cardView2.setOnClickListener(v -> {
-
+            Intent intent=new Intent(requireContext(),tenminworkout.class);
+            startActivity(intent);
         });
         cardView3.setOnClickListener(v -> {
-
+            Intent intent=new Intent(requireContext(),morning_routine.class);
+            startActivity(intent);
         });
         cardView4.setOnClickListener(v -> {
-
+            Intent intent=new Intent(requireContext(),meditation.class);
+            startActivity(intent);
         });
 
         return view;

@@ -26,10 +26,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, int position) {
-    String rname=remiderlist.get(position).getReminder();
-    String rcount=remiderlist.get(position).getRemicounter();
+    //String rname=remiderlist.get(position).getReminder();
+    //String rcount=remiderlist.get(position).getRemicounter();
 
-    holder.setDate(rname,rcount);
+    //dholder.setDate(rname,rcount);
     }
 
     @Override

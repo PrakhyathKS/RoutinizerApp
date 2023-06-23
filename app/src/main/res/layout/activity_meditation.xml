@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1E7FE"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Meditation Guide"
+                android:textColor="#8767EF"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="1. Find a Quiet and Comfortable Space: Choose a quiet place where you can sit comfortably without distractions. You can sit on a cushion or a chair, whatever feels comfortable for you."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="2. Assume a Comfortable Posture: Sit with your back straight, but not rigid, allowing your body to be relaxed and at ease. You can close your eyes or keep them slightly open, whichever feels more comfortable."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="3. Focus on Your Breath: Bring your attention to your breath. Notice the sensation of the breath as it enters and leaves your body. You can focus on the sensation of your breath at your nostrils, chest, or abdomen."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="4. Be Present and Non-Judgmental: As you focus on your breath, your mind may start to wander. When you notice your mind wandering, gently bring your attention back to your breath without judgment. Be patient and compassionate with yourself during the process."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="5. Observe Your Thoughts and Emotions: As you continue to meditate, thoughts, emotions, or sensations may arise. Rather than getting caught up in them, try to observe them without judgment or attachment. Acknowledge them and let them pass, returning your focus to your breath."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="6. Cultivate Mindfulness: Meditation is about being fully present in the moment. You can expand your practice by bringing mindfulness to other aspects of your life, such as daily activities, interactions, and experiences."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="7. Start with Short Sessions: As a beginner, start with shorter meditation sessions, such as 5 or 10 minutes, and gradually increase the duration as you become more comfortable and experienced."
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:paddingBottom="16dp"
+                android:text="8. Be Consistent: Consistency is key when it comes to meditation. Set aside a regular time for your practice, whether it's in the morning, during a break, or in the evening. Aim to meditate daily or as often as possible to experience the benefits."
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
