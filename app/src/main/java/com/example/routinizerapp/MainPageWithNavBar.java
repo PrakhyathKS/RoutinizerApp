@@ -35,7 +35,7 @@ public class MainPageWithNavBar extends AppCompatActivity {
                 showFragment(new TimerFragment());
                 return true;
             } else if (item.getItemId()==R.id.logoutMenu) {
-//                showFragment(new Second4Fragment());
+                finish();
                return true;
             }
             return false;

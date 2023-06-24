@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -55,6 +56,7 @@ public class TimerFragment extends Fragment {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(requireContext(), "Pomodoro timer Started", Toast.LENGTH_SHORT).show();
                 startTimer();
             }
         });
@@ -62,6 +64,8 @@ public class TimerFragment extends Fragment {
         stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(requireContext(), "Pomodoro Timer Stopp" +
+                        "ed", Toast.LENGTH_SHORT).show();
                 stopTimer();
             }
         });
@@ -69,6 +73,7 @@ public class TimerFragment extends Fragment {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(requireContext(), "Timer Rested", Toast.LENGTH_SHORT).show();
                 resetTimer();
             }
         });

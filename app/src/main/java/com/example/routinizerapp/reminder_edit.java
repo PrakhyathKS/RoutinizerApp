@@ -99,7 +99,7 @@ public class reminder_edit extends AppCompatActivity {
                     Toast.makeText(reminder_edit.this, "select priority", Toast.LENGTH_SHORT).show();
                 }
 
-                ModelClass modelClass=new ModelClass(layoutmode,radioGroupret,layouttitleret,layoutdescret,timertextret,countertext1ret);
+                ModelClass modelClass=new ModelClass(layoutmode,radioGroupret,layouttitleret,layoutdescret,countertext1ret,timertextret);
                 database.getReference().child("routines").push().setValue(modelClass);
 
 
@@ -107,6 +107,12 @@ public class reminder_edit extends AppCompatActivity {
                 Intent intent = new Intent(reminder_edit.this,MainPageFragment.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }

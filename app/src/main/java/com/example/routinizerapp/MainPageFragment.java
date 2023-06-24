@@ -3,6 +3,8 @@ package com.example.routinizerapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,13 +30,14 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 public class MainPageFragment extends Fragment {
     Button expandButton;
     CalendarView calendarView;
 
     FloatingActionButton fbMain, fb1, fb2, fb3;
-
-
+    RecyclerView recyclerView;
 
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     String userId = user.getUid();
@@ -88,14 +91,40 @@ public class MainPageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_main_page, container, false);
-        expandButton = view.findViewById(R.id.expandButton);
-        calendarView = view.findViewById(R.id.calendarView);
-        calendarView.setVisibility(View.INVISIBLE);
-        linearLayout = view.findViewById(R.id.hello);
+       // expandButton = view.findViewById(R.id.expandButton);
+       // calendarView = view.findViewById(R.id.calendarView);
+        //calendarView.setVisibility(View.INVISIBLE);
+       // linearLayout = view.findViewById(R.id.hello);
         fbMain = view.findViewById(R.id.fbMain);
         fb1 = view.findViewById(R.id.fb1);
         fb2 = view.findViewById(R.id.fb2);
         fb3 = view.findViewById(R.id.fb3);
+        recyclerView = view.findViewById(R.id.recyclerView);
+
+
+        final ArrayList<ModelClass> routineModels = new ArrayList<>();
+        final RoutineAdapter adapter = new RoutineAdapter(routineModels, requireContext());
+        recyclerView.setAdapter(adapter);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());
+        recyclerView.setLayoutManager(layoutManager);
+
+        database1.getReference().child("routines").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                routineModels.clear();
+                for(DataSnapshot snapshot1 : snapshot.getChildren()) {
+                    ModelClass model = snapshot1.getValue(ModelClass.class);
+                    routineModels.add(model);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
         hideButtons();
@@ -141,17 +170,19 @@ public class MainPageFragment extends Fragment {
             }
         });
 
-        expandButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Toggle the visibility of the CalendarView
-                if (calendarView.getVisibility() == View.INVISIBLE) {
-                    calendarView.setVisibility(View.VISIBLE); // Show the CalendarView
-                } else {
-                    calendarView.setVisibility(View.INVISIBLE); // Hide the CalendarView
-                }
-            }
-        });
+//        expandButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // Toggle the visibility of the CalendarView
+//                if (calendarView.getVisibility() == View.INVISIBLE) {
+//                    calendarView.setVisibility(View.VISIBLE); // Show the CalendarView
+//                } else {
+//                    calendarView.setVisibility(View.INVISIBLE); // Hide the CalendarView
+//                }
+//            }
+//        });
+
+
 
         return view;
     }

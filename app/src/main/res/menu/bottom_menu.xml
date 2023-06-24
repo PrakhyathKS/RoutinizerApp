@@ -5,14 +5,14 @@
         android:title="For you" />
     <item
         android:id="@+id/task"
-        android:icon="@drawable/for_you"
-        android:title="Task" />
+        android:icon="@drawable/add_task"
+        android:title="Routine" />
     <item
         android:id="@+id/timerMenu"
-        android:icon="@drawable/for_you"
+        android:icon="@drawable/timer"
         android:title="Timer" />
     <item
         android:id="@+id/logoutMenu"
-        android:icon="@drawable/for_you"
+        android:icon="@drawable/logout"
         android:title="Logout" />
 </menu>

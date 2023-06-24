@@ -13,7 +13,8 @@
         app:menu="@menu/bottom_menu"
         android:elevation="2dp"
         app:itemIconSize="30dp"
-        app:itemTextColor="@color/black"
+        app:itemIconTint="@drawable/icon_selected_tint"
+        app:itemTextColor="#8767EF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>

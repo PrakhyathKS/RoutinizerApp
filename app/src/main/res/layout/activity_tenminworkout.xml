@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:paddingTop="8dp"
-        android:text="Each exercise should be performed for 40 seconds, followed by a 20-second rest."
+        android:text="Each exercise should be performed for 45 seconds, followed by a 15-second rest."
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
 
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="1. Jumping Jacks"
+        android:text="1. High Knees"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
 
@@ -35,14 +35,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="2. Push-Ups"
+        android:text="2. up and down plank"
         android:textColor="#FFFFFF" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="3. Squats"
+        android:text="3. Half burpees"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
 
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="4. Mountain Climbers"
+        android:text="4. Toe Touhces"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
 
@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="5. Plank"
+        android:text="5. Squat Jump"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
 
@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="6. Lunges"
+        android:text="6. Side Plank"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
 
@@ -74,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="7. Bicycle Crunches"
+        android:text="7. Alternate Lunges"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
 
@@ -82,7 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="8. Tricep Dips"
+        android:text="8. Jumping Jacks"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
 
@@ -90,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="9. High Knees"
+        android:text="9. Hip Thrusts"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
 
@@ -99,7 +99,18 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:paddingBottom="16dp"
-        android:text="10. Burpees"
+        android:text="10. Butt Kicks"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+
+        android:id="@+id/linkTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:paddingTop="8dp"
+        android:text="CLICK HERE for the youtube link"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
 
