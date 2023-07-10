@@ -3,8 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    android:background="#00E1E7FE"
-    android:orientation="vertical">
+    android:background="#E1E7FE"
+    android:orientation="vertical"
+    android:paddingHorizontal="0dp"
+    android:paddingVertical="0dp"
+    android:paddingTop="0dp">
 
     <TextView
         android:id="@+id/textView5"

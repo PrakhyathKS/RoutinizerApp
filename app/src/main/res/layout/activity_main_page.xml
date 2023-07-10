@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="#E1E7FE"
     android:backgroundTint="#E1E7FE"
     >
@@ -11,7 +12,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="415dp"
-        android:layout_height="649dp"
+        android:layout_height="630dp"
         android:layout_marginStart="2dp"
         android:layout_marginEnd="1dp"
         android:paddingVertical="10dp"
@@ -43,7 +44,7 @@
         android:clickable="true"
         app:layout_constraintBottom_toTopOf="@+id/fbMain"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add"
+        app:srcCompat="@drawable/notification"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -55,7 +56,8 @@
         android:clickable="true"
         app:layout_constraintBottom_toTopOf="@+id/fb1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add"
+
+        app:srcCompat="@drawable/todo"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -67,7 +69,7 @@
         android:clickable="true"
         app:layout_constraintBottom_toTopOf="@+id/fb2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add"
+        app:srcCompat="@drawable/counter"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView

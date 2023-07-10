@@ -39,11 +39,11 @@ public class MainPageFragment extends Fragment {
     FloatingActionButton fbMain, fb1, fb2, fb3;
     RecyclerView recyclerView;
 
-    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    String userId = user.getUid();
+   // FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+   // String userId = user.getUid();
 
     FirebaseDatabase database1 = FirebaseDatabase.getInstance();
-    DatabaseReference userNodeRef = database1.getReference().child("users").child(userId);
+   // DatabaseReference userNodeRef = database1.getReference().child("users").child(userId);
 
     boolean isbool = true;
     private boolean areButtonsVisible;

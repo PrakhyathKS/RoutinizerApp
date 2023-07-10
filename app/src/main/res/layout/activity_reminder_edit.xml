@@ -4,28 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+
+    android:background="#E1E7FE"
     tools:context=".reminder_edit">
 
     <EditText
         android:id="@+id/layouttitle"
-        android:layout_width="314dp"
-        android:layout_height="63dp"
+        android:layout_width="237dp"
+        android:layout_height="61dp"
         android:layout_marginStart="37dp"
         android:layout_marginTop="51dp"
         android:contentDescription="Title"
         android:hint="Title"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/layoutdesc"
-        android:layout_width="351dp"
-        android:layout_height="182dp"
+        android:layout_width="271dp"
+        android:layout_height="110dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="164dp"
         android:hint="description"
         android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,32 +48,38 @@
 
         <RadioButton
             android:id="@+id/radioButton1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="High" />
+            android:text="High"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medium" />
+            android:text="Medium"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Low" />
+            android:text="Low"
+            android:textColor="#FFFFFF" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/priorityh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="392dp"
+        android:layout_marginEnd="260dp"
         android:text="Priority"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/save"
@@ -74,6 +87,7 @@
         android:layout_height="62dp"
         android:layout_marginStart="60dp"
         android:layout_marginBottom="45dp"
+        android:backgroundTint="#8767F0"
         android:text="save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -84,31 +98,36 @@
         android:layout_height="62dp"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="45dp"
+        android:backgroundTint="#8767F0"
         android:text="delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/timertext"
-        android:layout_width="127dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="340dp"
-        android:ems="10"
-        android:hint="Timer"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
         android:id="@+id/countertext1"
         android:layout_width="124dp"
         android:layout_height="47dp"
-        android:layout_marginTop="380dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="44dp"
         android:ems="10"
         android:hint="Counter"
         android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/timertext"
+        android:layout_width="133dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="216dp"
+        android:ems="10"
+        android:hint="Time (HH:MM)"
+        android:inputType="time"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

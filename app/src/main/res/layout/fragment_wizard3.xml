@@ -26,7 +26,7 @@
         android:layout_width="369dp"
         android:layout_height="304dp"
         android:layout_marginTop="140dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="10dp"
         android:paddingHorizontal="30dp"
         android:text=" The Routinizer app boosts productivity with a Pomodoro timer and personalized &quot;For You&quot; page. The Pomodoro technique enhances focus by breaking tasks into intervals with short breaks. The &quot;For You&quot; page offers tailored content for motivation and learning. Together, they optimize routines and drive productivity."
         android:textColor="#FFFFFF"

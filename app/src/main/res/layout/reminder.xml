@@ -8,22 +8,20 @@
 
     <View
         android:id="@+id/view5"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="120dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/round"
         android:backgroundTint="#8767EF"
         android:foregroundGravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ReminderTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="106dp"
+        android:layout_height="34dp"
         android:layout_marginTop="68dp"
         android:text="Reminder"
         android:textColor="#F6F0F0"
@@ -40,20 +38,22 @@
         android:layout_marginTop="16dp"
         android:text="Reminder"
         android:textColor="#F6F0F0"
-        android:textSize="24sp"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/priorityReminder"
-        android:layout_width="88dp"
-        android:layout_height="30dp"
+        android:layout_width="92dp"
+        android:layout_height="33dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="160dp"
         android:text="TextView"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,9 +62,11 @@
         android:layout_width="70dp"
         android:layout_height="29dp"
         android:layout_marginTop="68dp"
-        android:layout_marginEnd="64dp"
-        android:text="TextView"
+        android:layout_marginEnd="68dp"
+        android:hint="remindertime"
         android:textColor="#FFFFFF"
+        android:textColorHint="#F6F0F0"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

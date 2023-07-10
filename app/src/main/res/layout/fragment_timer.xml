@@ -17,7 +17,7 @@
         android:gravity="center_horizontal"
         android:text="Pomodoro Timer"
         android:textColor="#8767EF"
-        android:textSize="40sp"
+        android:textSize="42sp"
         android:textStyle="bold" />
 
     <EditText

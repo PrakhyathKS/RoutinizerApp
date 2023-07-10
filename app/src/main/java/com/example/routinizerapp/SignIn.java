@@ -44,7 +44,7 @@ public class SignIn extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
 
-                                Toast.makeText(SignIn.this, "Authentication su.",
+                                Toast.makeText(SignIn.this, "Authentication sucess!!",
                                         Toast.LENGTH_SHORT).show();
                                 createIntent();
                             } else {
