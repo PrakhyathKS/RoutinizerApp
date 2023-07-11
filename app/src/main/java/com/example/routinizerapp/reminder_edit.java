@@ -38,6 +38,9 @@ public class reminder_edit extends AppCompatActivity {
     String radioGroupret;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

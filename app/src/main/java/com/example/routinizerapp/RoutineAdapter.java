@@ -1,6 +1,8 @@
 package com.example.routinizerapp;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,6 +56,9 @@ public class RoutineAdapter extends RecyclerView.Adapter {
         }
     }
 
+    //test work
+
+
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
@@ -65,6 +70,61 @@ public class RoutineAdapter extends RecyclerView.Adapter {
 //        }else if(rtModel.getLayoutmode().equals("counter")) {
 //
 //        }
+
+        /*
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                new AlertDialog.Builder(context)
+                        .setTitle("Delete")
+                        .setMessage("are sure you waant to delete it?")
+                        .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                database.getReference().child("routines").child(rtModel.getRoutineKey()).setValue(null);
+                            }
+                        })
+                        .setNegativeButton("no", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+//return false;
+                .show();
+            }
+
+        }); */
+
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+    @Override
+    public boolean onLongClick(View v) {
+        new AlertDialog.Builder(context)
+                .setTitle("Delete")
+                .setMessage("Are you sure you want to delete it?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Perform the delete operation here
+                        database.getReference().child("routines").child(rtModel.getRoutineKey()).setValue(null);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
+
+        // Return true to indicate that the long click event is consumed
+        return true;
+    }
+});
+
+
+
         if(holder.getClass() == RemainderViewHolder.class) {
             ((RemainderViewHolder) holder).remainderTime.setText(rtModel.getTimertext());
             ((RemainderViewHolder) holder).priorityRemainder.setText(rtModel.getRadioGroup());

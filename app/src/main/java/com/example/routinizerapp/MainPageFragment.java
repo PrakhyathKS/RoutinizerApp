@@ -115,6 +115,7 @@ public class MainPageFragment extends Fragment {
                 routineModels.clear();
                 for(DataSnapshot snapshot1 : snapshot.getChildren()) {
                     ModelClass model = snapshot1.getValue(ModelClass.class);
+                    model.setRoutineKey(snapshot1.getKey());
                     routineModels.add(model);
                 }
                 adapter.notifyDataSetChanged();
